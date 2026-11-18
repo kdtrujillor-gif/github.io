@@ -1,4 +1,4 @@
-  :root{
+:root{
     --bg:#F2F1EC;
     --surface:#FFFFFF;
     --ink:#131417;
@@ -98,6 +98,18 @@
   .work-card ul li b{color:var(--ink); font-weight:600;}
   .work-link{margin-top:18px; display:inline-flex; gap:6px; font-family:var(--mono); font-size:0.8rem; color:var(--blue); border-bottom:1.5px solid var(--blue);}
 
+  /* ---- Proyecto destacado (HostFlow) ---- */
+  .work-card--featured{grid-template-columns:280px 1fr; border-color:var(--blue); box-shadow:6px 8px 0 var(--blue-soft);}
+  .work-card--featured:hover{box-shadow:8px 10px 0 var(--blue-soft);}
+  .work-card--featured .work-thumb{position:sticky; top:96px;}
+  .featured-label{display:inline-block; font-family:var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:.05em; background:var(--blue); color:#fff; padding:5px 12px; border-radius:999px; margin-bottom:12px;}
+  .work-card .desc b{color:var(--ink); font-weight:600;}
+  .metric-chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;}
+  .metric-chip{font-family:var(--mono); font-size:0.76rem; padding:7px 13px; border-radius:999px; border:1.5px solid var(--ink); color:var(--ink); background:var(--surface);}
+  .metric-chip b{color:var(--blue); font-weight:600;}
+  .work-card code{font-family:var(--mono); font-size:0.84em; background:var(--blue-soft); color:var(--ink); padding:1px 6px; border-radius:6px;}
+  .work-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;}
+
   .more-note{margin-top:22px; font-family:var(--mono); font-size:0.85rem; color:var(--ink-soft); text-align:center; padding:18px; border-top:1.5px dashed var(--line-soft);}
 
   /* ---------------- TRAYECTORIA (secondary, compact) ---------------- */
@@ -131,6 +143,8 @@
     .about-grid{grid-template-columns:1fr;}
     .work-card{grid-template-columns:1fr;}
     .work-thumb{max-width:220px;}
+    .work-card--featured{grid-template-columns:1fr;}
+    .work-card--featured .work-thumb{position:static; max-width:100%; aspect-ratio:16/10;}
     .tray-cols{grid-template-columns:1fr;}
     .tray-item{grid-template-columns:1fr; gap:2px;}
     nav.links{position:fixed; top:70px; left:0; right:0; bottom:0; background:var(--bg); transform:translateX(100%); transition:transform .3s ease; padding:30px 28px;}
